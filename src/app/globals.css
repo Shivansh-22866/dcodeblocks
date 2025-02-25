@@ -17,5 +17,14 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Proxon', sans-serif;
+}
+
+/* globals.css */
+
+@font-face {
+  font-family: 'Proxon';
+  src: url('/fonts/proxon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
