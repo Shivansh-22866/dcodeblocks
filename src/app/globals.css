@@ -28,3 +28,8 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+
+
+.animate-move-left:hover {
+  animation-play-state: paused;
+}
