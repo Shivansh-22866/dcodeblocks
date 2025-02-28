@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 export default function LoadingScreen() {
   return (
     <motion.div
-      className="fixed inset-0 flex items-center justify-center bg-gradient-to-r from-purple-950 to-purple-800 text-white z-50"
+      className="fixed inset-0 flex items-center justify-center bg-slate-950 text-white z-50"
       initial={{ opacity: 1 }}
-      animate={{ opacity: 0, y: -100 }}
+      animate={{ opacity: 0}}
       exit={{ opacity: 0 }}
       transition={{ duration: 1.5, ease: "easeInOut" }}
     >
@@ -26,13 +26,12 @@ export default function LoadingScreen() {
         {/* Text with some bounce effect */}
         <motion.div
           className="text-4xl font-extrabold text-center"
-          initial={{ y: 10, opacity: 0 }}
+          initial={{ opacity: 0 }}
           animate={{
             opacity: [0, 1],
-            y: [10, 0],
           }}
           transition={{
-            duration: 0.5,
+            duration: 0.3,
             ease: "easeInOut",
           }}
         >

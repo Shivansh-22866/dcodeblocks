@@ -6,9 +6,7 @@ import React, { useEffect, useState, useRef } from "react";
 
 interface InfiniteMovingCardsProps {
   items: {
-    quote: string;
     name: string;
-    title: string;
     image: StaticImageData;
   }[];
   direction?: "left" | "right";

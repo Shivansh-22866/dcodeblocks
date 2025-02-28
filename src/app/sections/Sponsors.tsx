@@ -6,52 +6,35 @@ import Csharp from '@/app/assets/images/csharp.png'
 import Rair from '@/app/assets/images/rair.png'
 import sharpeco from '@/app/assets/images/sharpeco.png'
 import Stratis from '@/app/assets/images/stratis.png'
+import { Fragment } from "react";
+import Image from 'next/image'
 
 export function Sponsors() {
+  const images = [
+    BeyondCode, Csharp, Rair, sharpeco, Stratis
+  ]
   return (
-    <div className="h-[10rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-      <InfiniteMovingCards
-        items={testimonials}
-        direction="right"
-        speed="fast"
-      />
+    <div className="mt-10 overflow-clip z-30">
+    <div className="bg-white overflow-hidden -mx-1">
+      <div className="flex [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+        <div className="flex gap-4 py-1 -translate-x-0">
+          <div className="flex flex-none gap-4 py-3 pr-4 animate-move-left [animation-duration:25s] [animation-direction:reverse]">
+            {[...new Array(5)].fill(0).map((_, idx) => (
+              <Fragment key={idx}>
+                {images.map((image, index) => (
+                  <div
+                    key={index}
+                    className="inline-flex gap-8 px-16 items-center"
+                  >
+                    <Image src={image} alt="scroll" />
+                  </div>
+                ))}
+              </Fragment>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
   );
 }
-
-const testimonials = [
-  {
-    quote:
-      "Beyond Code",
-    name: "Charles Dickens",
-    title: "Beyond the Code",
-    image: BeyondCode
-  },
-  {
-    quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: "CSHARP.TV",
-    title: "CSHARP.TV",
-    image: Csharp
-  },
-  {
-    quote: "All that we see or seem is but a dream within a dream.",
-    name: "RAIR Protocol",
-    title: "A Dream Within a Dream",
-    image: Rair
-  },
-  {
-    quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-    name: "Sharp Economy",
-    title: "Sharp Economy",
-    image: sharpeco
-  },
-  {
-    quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "Stratis",
-    title: "Moby-Dick",
-    image: Stratis
-  },
-];
