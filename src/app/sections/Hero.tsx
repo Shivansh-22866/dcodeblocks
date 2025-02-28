@@ -172,6 +172,8 @@ const Hero = () => {
 
         <CustomButton text="Register Now!" size="large" />
 
+
+        {/* First infinite Scroll section */}
         <div className="mt-10 overflow-clip z-30">
           <div className="bg-white overflow-hidden -mx-1">
             <div className="flex [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">

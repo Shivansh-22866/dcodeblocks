@@ -19,11 +19,11 @@ export default function LoadingScreen() {
         <motion.div
           className="w-16 h-16 border-4 border-t-4 border-white rounded-full animate-spin"
           style={{
-            borderTopColor: "#ff63e2", // Customize the spinner color
+            borderTopColor: "#ff63e2",
           }}
         />
 
-        {/* Text with some bounce effect */}
+        {/* Loading Text */}
         <motion.div
           className="text-4xl font-extrabold text-center"
           initial={{ opacity: 0 }}

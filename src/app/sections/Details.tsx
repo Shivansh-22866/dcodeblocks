@@ -20,7 +20,7 @@ const Details: React.FC = () => {
         setIsInView(true);
       }
     }, {
-      threshold: 0.5, // Adjust the threshold as needed
+      threshold: 0.5,
     });
 
     if (containerRef.current) {
@@ -62,7 +62,7 @@ const Details: React.FC = () => {
       onMouseLeave={() => setMainHovered(false)}
       className="py-8 relative overflow-hidden bg-gradient-to-tr from-purple-950/10 to-purple-950/30"
     >
-      {/* Your content remains the same */}
+      {/* CanvasEffect content */}
       <AnimatePresence>
         {mainHovered && (
           <motion.div

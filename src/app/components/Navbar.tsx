@@ -6,6 +6,7 @@ import CustomButton from './CustomButton';
 import Link from 'next/link';
 import Image from 'next/image';
 import HackIndia from '@/app/assets/images/hackindia.png'
+import Dcodeblock from '@/app/assets/images/dcodeblockslogo.png'
 
 // You can customize these menu items
 const menuItems = [
@@ -153,7 +154,9 @@ const Navbar: React.FC = () => {
           >
             <div className="p-6 space-y-8">
               <div className="flex justify-between items-center">
-                <span className="text-white text-xl font-bold">LOGO</span>
+                <span className="text-white text-xl font-bold">
+                  <Image src={Dcodeblock} alt="Dcodeblocks" />
+                </span>
                 <button 
                   onClick={() => setIsOpen(false)}
                   className="text-gray-400 hover:text-white"
